@@ -4,11 +4,9 @@
   "description": "simple ioc container using typescript",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only --no-notify -r tsconfig-paths/register src/index.ts",
-    "test:repository": "jest ./user/user.repository.spec.ts --watch",
-    "test:service": "jest ./user/user.service.spec.ts --watch",
-    "test:controller": "jest ./user/user.controller.spec.ts --watch",
+    "start": "ts-node-dev --respawn --transpile-only --no-notify -r tsconfig-paths/register src/demo/index.ts",
     "test:watch": "jest --watchAll",
+    "prelint": "npx prettier -cw src",
     "test": "jest"
   },
   "license": "MIT",

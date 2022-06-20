@@ -1,14 +1,17 @@
 # Simple IoC Container using Typescript
-A lightweight library ioc container using typescript
+A lightweight library ioc container using typescript.
+&nbsp;
 &nbsp;
 
 ## How it works
-A default `Container` instance named `container` is exported by the library.
-
-A new container can also be instantiated as below:
+A default `Container` class is exported by the library, where you needs to be instantiated as below:
 ```ts
 const container: Container = new Container();
 ```
+
+TODO: Needs to be generalised using singleton pattern. 
+
+&nbsp;
 
 ## Injector
 Class decorator factory that allows the class' dependencies to be injected at runtime. This relies on `reflect-metadata` to collect metadata about classes to be instantiated.
@@ -23,7 +26,7 @@ export class UserRepository {
     }
 }
 ```
-
+&nbsp;
 ## Binding
 
 Calling the `container.bind(ClassName)` method or with interface `container.bind<interface/types/ClassName>(ClassName)` will attempt to bind and construct the requested instance with its related dependencies.

@@ -3,4 +3,4 @@ import { Database } from "./user.database";
 const DBContext = new Database();
 
 export default DBContext;
-export * from './user.types';
+export * from "./user.types";

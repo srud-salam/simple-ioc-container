@@ -12,14 +12,15 @@ export class MockClassNoArgs {
 
 @Injectable
 export class MockClassWithArgs {
-  constructor(public mock: MockClassNoArgs) {
-  }
+  constructor(public mock: MockClassNoArgs) {}
 }
 
 @Injectable
 class MockClassDeepArgs {
-  constructor(public mockClassNoArgs: MockClassNoArgs, public mockClassWithArgs: MockClassWithArgs) {
-  }
+  constructor(
+    public mockClassNoArgs: MockClassNoArgs,
+    public mockClassWithArgs: MockClassWithArgs
+  ) {}
 }
 
 describe("Dependency Injection", () => {
@@ -28,14 +29,14 @@ describe("Dependency Injection", () => {
 
   test("Should not inject a null object", () => {
     const instance = container.bind(MockClassNoArgs);
-    
+
     expect(instance).not.toBe(undefined);
   });
 
   test("should invoke related mothod", () => {
     const instance = container.bind(MockClassNoArgs);
     const hello = instance.sayHello();
-    
+
     expect(hello).toBe(readableMessage);
   });
 
