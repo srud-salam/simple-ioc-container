@@ -4,12 +4,12 @@ A lightweight library ioc container using typescript.
 &nbsp;
 
 ## How it works
-A default `Container` class is exported by the library, where you needs to be instantiated as below:
+A default `Container` class exported by library, it needs to be instantiated as below:
 ```ts
 const container: Container = new Container();
 ```
 
-TODO: Needs to be generalised using singleton pattern. 
+TODO: Need to generalised instantiation of `Container` using singleton pattern. 
 
 &nbsp;
 
@@ -60,7 +60,7 @@ Install by `npm`
   start the example
   npm start
 ```
-Install add `yarn`
+Install by `yarn`
 ```ts
   #download this repository using https
   git clone https://github.com/srud-salam/simple-ioc-container.git ioc
